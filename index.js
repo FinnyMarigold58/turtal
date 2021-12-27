@@ -8,7 +8,8 @@ const db = require("./db.js")
 const Discord = require("discord.js")
 const client = new Discord.Client({
     intents: [
-        "GUILDS"
+        "GUILDS",
+        "GUILD_MESSAGES"
     ]
 })
 
@@ -69,6 +70,12 @@ client.botAdmin = (id) => {
     if (["263472056753061889"].includes(id)) return true
     return false
 }
+
+client.on("ready", async() => {
+    console.log("Connected!")
+    client.user.setActivity({ name: "Subscribe to SUBLADO" })
+})
+
 client.login(process.env.TOKEN)
 
 module.exports = { client }
