@@ -1,5 +1,5 @@
 const { moderations } = require("../../db.js")
-const { makeId } = require("../../helper/functions/generateId.js")
+const { makeId } = require("../../functions/makeId")
 
 module.exports = {
   name: "unmute",
