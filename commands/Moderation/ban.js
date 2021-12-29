@@ -3,6 +3,8 @@ const { makeID } = require("../../functions/makeId")
 
 module.exports = {
     name: "ban",
+    usage: "ban [user]",
+    description: "Bans a certain user from the guild.",
     userPermissions: ["BAN_MEMBERS"],
     botPermissions: ["BAN_MEMBERS"],
     run: async (message, args, client) => {

@@ -1,9 +1,23 @@
-const prefix = process.env.PREFIX
+const { guilds } = require("../db")
 
 module.exports = (client) => {
     client.on("messageCreate", async (message) => {
         if (message.author.bot) return
         if (message.content === `<@!${client.user.id}>`) return message.reply(`Hey! My prefix is ${prefix}, you can ask for \`${prefix}help\` if you ever need.`)
+
+        let guild = await guilds.findOne({
+          guildId: message.guild.id
+        })
+
+        if (!guild) {
+          await guilds.create({
+           guildId: message.guild.id,
+          })
+          guild = await guilds.findOne({
+            guildId: message.guild.id
+          })
+      }
+        const prefix = guild.prefix
         if (!message.content.startsWith(prefix)) return
         const args = message.content.slice(prefix.length).split(/ +/)
         const commandName = args.shift().toLowerCase()

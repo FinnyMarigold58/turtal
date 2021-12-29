@@ -4,7 +4,7 @@ const { makeId } = require("../../functions/makeId")
 module.exports = {
   name: "unban",
   description: "Unban a guild member",
-  usage: `${process.env.PREFIX}unban [user]`,
+  usage: `unban [user]`,
   userPermissions: ["BAN_MEMBERS"],
   botPermissions: ["BAN_MEMBERS"],
   run: async (message, args, client) => {

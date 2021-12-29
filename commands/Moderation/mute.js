@@ -3,6 +3,8 @@ const { makeId } = require("../../functions/makeId")
 
 module.exports = {
   name: "mute",
+  usage: "mute [user]",
+  description: "Mutes a certain user",
   botPermissions: ["MANAGE_ROLES"],
   userPermissions: ["MANAGE_MESSAGES"],
   run: async (message, args, client) => {

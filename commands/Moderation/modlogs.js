@@ -3,6 +3,8 @@ const { MessageEmbed } = require("discord.js")
 
 module.exports = {
     name: "modlogs",
+    usage: "modlogs <user>",
+    description: "View modlogs of a user.",
     aliases: ["moderations"],
     run: async (message, args, client) => {
             let target = message.guild.members.resolve(message.mentions.users.first())

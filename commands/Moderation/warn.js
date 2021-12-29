@@ -3,6 +3,8 @@ const { makeId } = require("../../functions/makeId")
 
 module.exports = {
     name: "warn",
+    description: "Warsn a user with a reason and dms them notifying them of their warn.",
+    usage: "warn [user] [reason]",
     userPermissions: ["MANAGE_MESSAGES"],
     run: async (message, args, client) => {
       let target = message.guild.members.resolve(message.mentions.users.first())

@@ -1,5 +1,7 @@
 module.exports = {
     name: "purge",
+    usage: "purge [number]",
+    description: "Clears a certain number of unpinned messages",
     userPermissions: ["MANAGE_MESSAGES"],
     botPermissions: ["MANAGE_MESSAGES"],
     run: async (message, args, client) => {

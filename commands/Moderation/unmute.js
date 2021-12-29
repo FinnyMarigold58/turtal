@@ -4,7 +4,7 @@ const { makeId } = require("../../functions/makeId")
 module.exports = {
   name: "unmute",
   description: "Unmute a muted guild member",
-  usage: `${process.env.PREFIX}unmute [user]`,
+  usage: `unmute [user]`,
   userPermissions: ["MANAGE_MESSAGES"],
   botPermissions: ["MANAGE_ROLES"],
   run: async (message, args, client) => {
