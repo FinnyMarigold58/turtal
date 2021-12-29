@@ -6,7 +6,7 @@ module.exports = {
     description: "Verifys user in current server.",
     botPermissions: ["MANAGE_ROLES"],
     run: async (message, args, client) => {
-        const guild = guilds.findOne({
+        const guild = await guilds.findOne({
             guildId: message.guild.id
         })
         const verifyRole = await message.guild.roles.resolve(guild.verifyRoleId)
