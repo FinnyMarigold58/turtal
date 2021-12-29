@@ -3,6 +3,8 @@ const fs = require("fs")
 
 module.exports = {
     name: "eval",
+    description: "No",
+    usage: "eval <code>",
     run: async (message, args, client) => {
         if (message.content.includes("TOKEN")) return await message.channel.send("Trying to get token, aren't you? 😏")
         if (!client.botAdmin(message.author.id)) return

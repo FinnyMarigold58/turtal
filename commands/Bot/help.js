@@ -31,6 +31,7 @@ module.exports = {
       .setThumbnail(client.user.displayAvatarURL())
       .setDescription(`**__Commands__**`)
       .addField("Bot:", Array.from(client.commands.filter(c => c.category === "Bot").keys()).map(cmd => `\`${guild.prefix}${cmd}\``).join(", ") || "Failed to gather data.")
+      .addField("Administration:", Array.from(client.commands.filter(c => c.category === "Administration").keys()).map(cmd => `\`${guild.prefix}${cmd}\``).join(", ") || "Failed to gather data.")
       .addField("Moderation:", Array.from(client.commands.filter(c => c.category === "Moderation").keys()).map(cmd => `\`${guild.prefix}${cmd}\``).join(", ") || "Failed to gather data.")
       .setFooter(`Requested by ${message.author.tag} (${message.author.id})`, message.author.displayAvatarURL())
       .setTimestamp()

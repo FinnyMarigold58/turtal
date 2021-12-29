@@ -12,7 +12,7 @@ const client = new Discord.Client({
         "GUILD_MESSAGES",
         "GUILD_MEMBERS",
         "DIRECT_MESSAGES",
-        "GUILD_BANS",
+        "GUILD_BANS"
     ]
 })
 
